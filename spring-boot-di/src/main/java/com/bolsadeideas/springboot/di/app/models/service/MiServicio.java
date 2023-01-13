@@ -4,8 +4,8 @@ import org.springframework.context.annotation.Primary;
 import org.springframework.stereotype.Service;
 
 //@Component es lo mismo que Service la diferencia es semantica
-@Service("miServicioSimple")
-@Primary
+//@Service("miServicioSimple")
+//@Primary
 public class MiServicio implements IServicio {
 	
 	@Override
