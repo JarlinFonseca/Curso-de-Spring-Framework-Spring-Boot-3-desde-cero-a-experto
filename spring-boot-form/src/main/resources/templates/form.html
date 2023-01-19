@@ -7,6 +7,23 @@
 <body>
 	<h3 th:text="${titulo}"></h3>
 	<form th:action="@{/form}" th:object="${usuario}" method="POST">
+	
+		<div>
+			<label for="email">Nombre</label>
+			<div>
+				<input type="text" th:field="*{nombre}" id="nombre">
+			</div>
+			<div th:if="${#fields.hasErrors('nombre')}" th:errors="*{nombre}"></div>
+		</div>
+		
+		<div>
+			<label for="email">Apellido</label>
+			<div>
+				<input type="text" th:field="*{apellido}" id="apellido">
+			</div>
+			<div th:if="${#fields.hasErrors('apellido')}" th:errors="*{apellido}"></div>
+		</div>		
+
 
 		<div>
 			<label for="username">Username</label>
