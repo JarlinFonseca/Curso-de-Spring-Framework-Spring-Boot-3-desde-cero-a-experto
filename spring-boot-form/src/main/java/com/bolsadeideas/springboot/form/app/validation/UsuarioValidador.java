@@ -17,7 +17,7 @@ public class UsuarioValidador implements Validator {
 
 	@Override
 	public void validate(Object target, Errors errors) {
-		Usuario usuario = (Usuario)target;
+		//Usuario usuario = (Usuario)target;
 		
 		ValidationUtils.rejectIfEmptyOrWhitespace(errors, "nombre", "requerido.usuario.nombre");
 		
@@ -25,9 +25,10 @@ public class UsuarioValidador implements Validator {
 		 * if(usuario.getNombre().isEmpty()) { errors.rejectValue("nombre",
 		 * "NotEmpty.usuario.nombre"); }
 		 */
-		if(!usuario.getIdentificador().matches("[0-9]{2}[.,][\\d]{3}[.,][\\d]{3}[-][A-Z]{1}")){
+		
+		/*if(!usuario.getIdentificador().matches("[0-9]{2}[.,][\\d]{3}[.,][\\d]{3}[-][A-Z]{1}")){
 			errors.rejectValue("identificador", "Pattern.usuario.identificador");
-		}
+		}*/
 		
 	}
 
