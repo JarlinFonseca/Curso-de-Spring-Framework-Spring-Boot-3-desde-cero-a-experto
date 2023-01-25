@@ -2,6 +2,7 @@ package com.bolsadeideas.springboot.error.app.services;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Optional;
 
 import org.springframework.stereotype.Service;
 
@@ -39,6 +40,12 @@ public class UsuarioServiceImp implements UsuarioService {
 			}
 		}
 		return resultado;
+	}
+
+	@Override
+	public Optional<Usuario> obtenerPorIdOptional(Integer id) {
+		Usuario usuario = this.obtenerPorId(id);
+		return Optional.ofNullable(usuario);
 	}
 
 }
