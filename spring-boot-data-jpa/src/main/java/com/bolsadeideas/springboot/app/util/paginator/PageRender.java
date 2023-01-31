@@ -40,7 +40,7 @@ public class PageRender<T> {
 			}
 		}
 		for(int i=0; i< hasta; i++) {
-			paginas.add(new PageItem(desde + i, paginaActual== desde+i));
+			paginas.add(new PageItem(desde + i, paginaActual == desde+i));
 		}
 		
 	}
