@@ -99,8 +99,7 @@ public class ClienteController {
 		} 
 		
 		if(!foto.isEmpty()) {
-			Path directorioRecursos = Paths.get("src//main//resources//static//uploads");
-			String rootPath = directorioRecursos.toFile().getAbsolutePath();
+			String rootPath = "C://Users//Jarlin//Documents//workspace-spring-tool-suite-4-4.17.1.RELEASE//Curso Spring Framework  Spring Boot 3 desde cero a experto//Temp//uploads";
 			try {
 				byte[] bytes = foto.getBytes();
 				Path rutaCompleta = Paths.get(rootPath+ "//"+ foto.getOriginalFilename());
